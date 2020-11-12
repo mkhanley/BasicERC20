@@ -1,2 +1,2 @@
 # BasicERC20
-[![Build Status](https://travis-ci.com/mkhanley/BasicERC20.svg?branch=main)
+[![Build Status](https://travis-ci.com/mkhanley/BasicERC20.svg?branch=main)](https://travis-ci.com/mkhanley/BasicERC20)
