@@ -39,9 +39,13 @@ start_ganache() {
 
   node_modules/.bin/ganache-cli --gasLimit 0xfffffffffff "${accounts[@]}" > /dev/null &
 
-  ganache_pid=$!
+  echo "Waiting for ganache to launch on port "$ganache_port"..."
 
-  echo "Started ganache with pid " $ganache_pid
+  while ! ganache_running; do
+    sleep 1 # wait for 1/10 of the second before check again
+  done
+
+  echo "Ganache launched with pid " $ganache_pid
 }
 
 if ganache_running; then
